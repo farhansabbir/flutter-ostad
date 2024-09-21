@@ -1,3 +1,10 @@
+//  1. Create a class called Book.
+// 2. Add properties for title, author, publication year, and pages read.
+// 3. Add a method called read that takes a number of pages as a parameter and adds it to the pages read.
+// 4. Add a method called getPagesRead that returns the number of pages read.
+// 5. Add a method called getTitle that returns the title of the book.
+// 6. Add a static property called totalBooks that keeps track of the total number of books created.
+
 class Book {
   static int totalBooks = 0;
   String title;
