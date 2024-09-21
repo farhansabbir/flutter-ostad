@@ -54,26 +54,28 @@ void main() {
       publicationYear: 1934);
 
   book_one.read(102);
+  book_one.read(10);
   book_two.read(19);
   book_three.read(29);
 
-  print(book_one.getTitle());
-  print(book_one.getAuthor());
-  print(book_one.getPublicationYear());
-  print(book_one.getPagesRead());
-  print(book_one.getBookAge());
+  print("Book1 title: " + book_one.getTitle());
+  print("Book1 Author: " + book_one.getAuthor());
+  print("Book1 publication year: " + book_one.getPublicationYear().toString());
+  print("Book1 pages read: " + book_one.getPagesRead().toString());
+  print("Book1 age: " + book_one.getBookAge().toString());
 
-  print(book_two.getTitle());
-  print(book_two.getAuthor());
-  print(book_two.getPublicationYear());
-  print(book_two.getPagesRead());
-  print(book_two.getBookAge());
+  print("Book2 title: " + book_two.getTitle());
+  print("Book2 Author: " + book_two.getAuthor());
+  print("Book2 publication year: " + book_two.getPublicationYear().toString());
+  print("Book2 pages read: " + book_two.getPagesRead().toString());
+  print("Book2 age: " + book_two.getBookAge().toString());
 
-  print(book_three.getTitle());
-  print(book_three.getAuthor());
-  print(book_three.getPublicationYear());
-  print(book_three.getPagesRead());
-  print(book_three.getBookAge());
+  print("Book3 title: " + book_three.getTitle());
+  print("Book3 Author: " + book_three.getAuthor());
+  print(
+      "Book3 publication year: " + book_three.getPublicationYear().toString());
+  print("Book3 pages read: " + book_three.getPagesRead().toString());
+  print("Book3 age: " + book_three.getBookAge().toString());
 
   print(Book.totalBooks);
 }
