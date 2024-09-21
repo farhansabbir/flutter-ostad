@@ -7,10 +7,10 @@
 
 class Book {
   static int totalBooks = 0;
-  String title;
-  String author;
-  int publicationYear;
-  int pagesRead;
+  String? title;
+  String? author;
+  int? publicationYear;
+  int pagesRead = 0;
 
   void read(int pages) {
     this.pagesRead += pages;
@@ -21,26 +21,22 @@ class Book {
   }
 
   String getTitle() {
-    return this.title;
+    return this.title!;
   }
 
   String getAuthor() {
-    return this.author;
+    return this.author!;
   }
 
   int getBookAge() {
-    return DateTime.now().year - this.publicationYear;
+    return DateTime.now().year - this.publicationYear!;
   }
 
   int getPublicationYear() {
-    return this.publicationYear;
+    return this.publicationYear!;
   }
 
-  Book(
-      {this.title = "The Great Gatsby",
-      this.author = "F. Scott Fitzgerald",
-      this.publicationYear = 1925,
-      this.pagesRead = 0}) {
+  Book({this.title, this.author, this.publicationYear, this.pagesRead = 0}) {
     totalBooks++;
   }
 }
@@ -52,13 +48,14 @@ void main() {
   book_one.publicationYear = 1925;
 
   Book book_two = Book(
-      publicationYear: 1930,
-      author: "John Doe",
-      title: "The Great Gatsby Volume 2");
+      author: "Jane Doe",
+      title: "The Great Gatsby Volume 2",
+      publicationYear: 1934);
+
   Book book_three = Book(
       author: "Jane Doe",
       title: "The Great Gatsby Volume 3",
-      publicationYear: 1934);
+      publicationYear: 1954);
 
   book_one.read(102);
   book_one.read(10);
