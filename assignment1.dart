@@ -53,7 +53,7 @@ void main() {
       publicationYear: 1934);
 
   Book book_three = Book(
-      author: "Jane Doe",
+      author: "John Doe",
       title: "The Great Gatsby Volume 3",
       publicationYear: 1954);
 
